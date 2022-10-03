@@ -16,7 +16,6 @@ clone:
     #!/bin/bash
     set -euo pipefail
 
-    source .venv/bin/activate
     # Clone the orga folder or pull if it already exists.
     if [[ ! -d "Orga" ]]; then
         echo "Cloning repository"
