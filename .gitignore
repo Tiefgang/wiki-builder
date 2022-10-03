@@ -1,0 +1,9 @@
+# The static files that're created by `mkdocs build`
+site
+
+# The folders that'll be copied from/into the project root.
+Orga
+docs
+
+# The python virtual environment
+.venv
