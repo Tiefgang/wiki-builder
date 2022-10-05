@@ -12,6 +12,18 @@ serve: setup clone
     source .venv/bin/activate
     mkdocs serve
 
+# Serve a local version of the wiki
+# Expects the path to the `Orga/Wiki` folder as an argument
+local_serve *args:
+    #!/bin/bash
+    set -euo pipefail
+
+    rm -r Wiki
+    cp -r {{ args }} ./
+
+    source .venv/bin/activate
+    mkdocs serve
+
 clone:
     #!/bin/bash
     set -euo pipefail
