@@ -4,6 +4,7 @@ site
 # The folders that'll be copied from/into the project root.
 Orga
 docs
+Wiki
 
 # The python virtual environment
 .venv

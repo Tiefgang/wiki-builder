@@ -6,7 +6,6 @@ It's main purpose is to have a easy and convenient workflow of building and serv
 
 This is mainly used by our server operators.
 
-
 ## Usage
 
 - `just build` Build the static files for serving with a http server.

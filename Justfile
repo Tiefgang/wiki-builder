@@ -28,10 +28,10 @@ clone:
     fi
 
     # Remove old files
-    rm -rf docs
+    rm -rf Wiki
 
     # Copy wiki files to local folder
-    cp -r Orga/docs ./
+    cp -r Orga/Wiki ./
 
 # Create virtual python env to install mkdocs + material theme.
 # This command updates the packages on a second run.
