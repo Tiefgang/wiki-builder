@@ -18,7 +18,7 @@ local_serve *args:
     #!/bin/bash
     set -euo pipefail
 
-    rm -r Wiki
+    rm -rf Wiki
     cp -r {{ args }} ./
 
     source .venv/bin/activate
