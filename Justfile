@@ -3,7 +3,7 @@ build: setup clone
     set -euo pipefail
 
     source .venv/bin/activate
-    mkdocs build
+    mkdocs build -d public
 
 serve: setup clone
     #!/bin/bash
