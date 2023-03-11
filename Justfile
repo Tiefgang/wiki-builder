@@ -12,8 +12,11 @@ serve: setup clone
     source .venv/bin/activate
     mkdocs serve
 
+clean:
+    rm -rf planung public Wiki
+
 # Serve a local version of the wiki
-# Expects the path to the `Orga/Wiki` folder as an argument
+# Expects the path to the `{{ repo }}/Wiki` folder as an argument
 local_serve *args:
     #!/bin/bash
     set -euo pipefail
@@ -24,16 +27,16 @@ local_serve *args:
     source .venv/bin/activate
     mkdocs serve
 
-clone:
+clone repo="planung":
     #!/bin/bash
     set -euo pipefail
 
-    # Clone the orga folder or pull if it already exists.
-    if [[ ! -d "Orga" ]]; then
+    # Clone the folder or pull if it already exists.
+    if [[ ! -d "{{ repo }}" ]]; then
         echo "Cloning repository"
-        git clone --quiet git@github.com:Tiefgang/Orga.git
+        git clone --quiet git@github.com:Tiefgang/{{ repo }}.git
     else
-        cd Orga
+        cd {{ repo }}
         git reset --quiet --hard
         git pull --quiet
         cd ..
@@ -43,7 +46,7 @@ clone:
     rm -rf Wiki
 
     # Copy wiki files to local folder
-    cp -r Orga/Wiki ./
+    cp -r {{ repo }}/Wiki ./
 
 # Create virtual python env to install mkdocs + material theme.
 # This command updates the packages on a second run.

@@ -3,6 +3,7 @@ site
 
 # The folders that'll be copied from/into the project root.
 Orga
+planung
 docs
 Wiki
 
