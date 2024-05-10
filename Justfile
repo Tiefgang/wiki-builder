@@ -1,4 +1,6 @@
-build: setup clone
+deploy: setup clone build
+
+build:
     #!/bin/bash
     set -euo pipefail
 
