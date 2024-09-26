@@ -15,7 +15,7 @@ serve: setup clone
     mkdocs serve
 
 clean:
-    rm -rf planung public Wiki
+    rm -rf planung public Wiki .venv
 
 # Serve a local version of the wiki
 # Expects the path to the `{{ repo }}/Wiki` folder as an argument

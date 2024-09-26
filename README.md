@@ -13,6 +13,12 @@ This is mainly used by our server operators.
 - `just setup` Install dependencies.
 - `just clone` Clone the actual wiki repo and put the wiki files into this project folder.
 
+## Troubleshooting
+
+If you're experiencing any issues but it worked before, run a `just clean`.
+
+This kills the Python virtual environment, pulls the newest dependencies and rebuilds everything.
+
 ## Requirements
 
 - A Github account with proper pull permissions
