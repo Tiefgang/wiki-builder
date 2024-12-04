@@ -2,6 +2,8 @@ site_name: Tiefgang Wiki
 docs_dir: Wiki
 theme:
   name: material
+  features:
+    - content.tabs.link
 markdown_extensions:
   - attr_list
   - md_in_html
