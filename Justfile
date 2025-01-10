@@ -1,33 +1,20 @@
 deploy: setup clone build
 
 build:
-    #!/bin/bash
-    set -euo pipefail
-
-    source .venv/bin/activate
-    mkdocs build -d public
+    uv run mkdocs build -d public
 
 serve: setup clone
-    #!/bin/bash
-    set -euo pipefail
-
-    source .venv/bin/activate
-    mkdocs serve
+    uv run mkdocs serve
 
 clean:
     rm -rf planung public Wiki .venv
 
 # Serve a local version of the wiki
-# Expects the path to the `{{ repo }}/Wiki` folder as an argument
+# Expects the path to your local `Wiki` folder as an argument
 local_serve *args:
-    #!/bin/bash
-    set -euo pipefail
-
     rm -rf Wiki
     cp -r {{ args }} ./
-
-    source .venv/bin/activate
-    mkdocs serve
+    uv run mkdocs serve
 
 clone repo="planung":
     #!/bin/bash
@@ -55,16 +42,5 @@ clone repo="planung":
 setup:
     #!/bin/bash
     set -euo pipefail
-
-    if [[ ! -d ".venv" ]]; then
-        echo "Setting up virtual environment"
-        python3 -m venv .venv
-    fi
-
-    source .venv/bin/activate
-
     echo "Installing dependencies"
-    pip install \
-        --upgrade \
-        --quiet \
-        --requirement ./requirements.txt
+    uv sync
