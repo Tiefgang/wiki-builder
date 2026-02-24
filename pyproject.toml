@@ -3,5 +3,5 @@ name = "wiki-builder"
 version = "0.1.0"
 description = "Mini project to build the wiki."
 readme = "README.md"
-requires-python = "~=3.13.12"
+requires-python = "~=3.14.2"
 dependencies = ["mkdocs>=1.6.1", "mkdocs-material>=9.5.49"]
