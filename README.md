@@ -21,7 +21,7 @@ This kills the Python virtual environment, pulls the newest dependencies and reb
 
 ## Requirements
 
-- A Github account with proper pull permissions
 - Linux
+- A Github account, a registered ssh key and access to the wiki repo
 - [`just`](https://github.com/casey/just)
-- A modern Python 3
+- [`uv`](https://github.com/astral-sh/uv)
