@@ -43,4 +43,4 @@ setup:
     #!/bin/bash
     set -euo pipefail
     echo "Installing dependencies"
-    uv sync
+    uv sync --managed-python
